@@ -1,0 +1,26 @@
+	<TabItem x:Name="SharedMailTab" Header="Shared Mailbox" Margin="0">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="288*"/>
+                        <ColumnDefinition Width="425*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBox x:Name="SMUsername_TextBox" HorizontalAlignment="Left" Height="23" Margin="104,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="30,11,0,0" TextWrapping="Wrap" Text="Username" VerticalAlignment="Top" Height="22"/>
+                    <ListView x:Name="SM_ListView" HorizontalAlignment="Left" Height="257" Margin="27,57,0,0" VerticalAlignment="Top" Width="477" Grid.ColumnSpan="2">
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn Header="Username" DisplayMemberBinding ="{Binding User}" Width="238"/>
+                                <GridViewColumn Header="Permissions" DisplayMemberBinding ="{Binding AccessRights}" Width="238"/>
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
+                    <TextBox x:Name="SMRemoveUser_TextBox" HorizontalAlignment="Left" Height="23" Margin="30,359,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="171" IsReadOnly="True" Background="#FFDDDDDD"/>
+                    <Button x:Name="SMRemove_Button" Content="Remove Access" HorizontalAlignment="Left" Margin="231,359,0,0" VerticalAlignment="Top" Width="107" Grid.ColumnSpan="2"/>
+                    <TextBox x:Name="SMAddUser_TextBox" HorizontalAlignment="Left" Height="23" Margin="255,61,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
+                    <Button x:Name="SMAdd_Button" Content="Add Access" HorizontalAlignment="Left" Margin="255,89,0,0" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="34,325,0,0" TextWrapping="Wrap" Text="Double Click a username above" VerticalAlignment="Top"/>
+                    <Button x:Name="SMCheck_Button" Content="Check Current Access" HorizontalAlignment="Left" Margin="253,12,0,0" VerticalAlignment="Top" Width="141" Grid.ColumnSpan="2"/>
+                    <TextBlock x:Name="SMError_TextBlock" HorizontalAlignment="Left" Margin="130,11,0,0" TextWrapping="Wrap" Text="Invalid Mailbox, try another name" VerticalAlignment="Top" Foreground="Red" Visibility="Hidden" Grid.Column="1"/>
+
+                </Grid>
+            </TabItem>

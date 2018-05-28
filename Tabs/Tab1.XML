@@ -1,0 +1,32 @@
+	<TabItem x:Name="CalPermTab" Header="Calendar Permissions" Margin="0">
+                <Grid>
+                    <TextBox x:Name="CalPermUser_TextBox" HorizontalAlignment="Left" Height="23" Margin="100,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="27,11,0,0" TextWrapping="Wrap" Text="Username:" VerticalAlignment="Top"/>
+                    <ListView x:Name="CalPerm_ListView" HorizontalAlignment="Left" Height="257" Margin="27,57,0,0" VerticalAlignment="Top" Width="477">
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn Header="Username" DisplayMemberBinding ="{Binding User}" Width="238"/>
+                                <GridViewColumn Header="Permissions" DisplayMemberBinding ="{Binding AccessRights}" Width="238"/>
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
+                    <Button x:Name="CalPermChange_Button" Content="Change Permissions" HorizontalAlignment="Left" Margin="336,343,0,0" VerticalAlignment="Top" Width="168" Height="22"/>
+                    <TextBox x:Name="CalPermUserEdit_TextBox" HorizontalAlignment="Left" Height="23" Margin="27,357,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsReadOnly="True" Background="#FFDDDDDD"/>
+                    <Button x:Name="CalPermRemove_Button" Content="Remove Permissions" HorizontalAlignment="Left" Margin="336,370,0,0" VerticalAlignment="Top" Width="168" Height="27"/>
+                    <TextBox x:Name="CalPermUserAdd_TextBox" HorizontalAlignment="Left" Height="23" Margin="544,57,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                    <Button x:Name="CalPermAdd_Button" Content="Add Permissions" HorizontalAlignment="Left" Margin="544,199,0,0" VerticalAlignment="Top" Width="100"/>
+
+                    <RadioButton GroupName="CalPermAdd" x:Name="CalPermAddOwner_Radio" Content="Owner" HorizontalAlignment="Left" Margin="544,97,0,0" VerticalAlignment="Top"/>
+                    <RadioButton GroupName="CalPermAdd" x:Name="CalPermAddEditor_Radio" Content="Editor" HorizontalAlignment="Left" Margin="544,117,0,0" VerticalAlignment="Top"/>
+                    <RadioButton GroupName="CalPermAdd" x:Name="CalPermAddReviewer_Radio" Content="Reviewer" HorizontalAlignment="Left" Margin="544,137,0,0" VerticalAlignment="Top"/>
+                    <RadioButton GroupName="CalPermAdd" x:Name="CalPermAddAvail_Radio" Content="AvailabilityOnly" HorizontalAlignment="Left" Margin="544,157,0,0" VerticalAlignment="Top"/>
+
+                    <RadioButton GroupName="CalPermChange" x:Name="CalPermChOwner_Radio" Content="Owner" HorizontalAlignment="Left" Margin="198,325,0,0" VerticalAlignment="Top"/>
+                    <RadioButton GroupName="CalPermChange" x:Name="CalPermChEditor_Radio" Content="Editor" HorizontalAlignment="Left" Margin="198,345,0,0" VerticalAlignment="Top"/>
+                    <RadioButton GroupName="CalPermChange" x:Name="CalPermChReviewer_Radio" Content="Reviewer" HorizontalAlignment="Left" Margin="198,365,0,0" VerticalAlignment="Top"/>
+                    <RadioButton GroupName="CalPermChange" x:Name="CalPermChAvail_Radio" Content="AvailabilityOnly" HorizontalAlignment="Left" Margin="198,385,0,0" VerticalAlignment="Top"/>
+                    <Button x:Name="CalPermCheck_Button" Content="Check Permissions" HorizontalAlignment="Left" Margin="246,11,0,0" VerticalAlignment="Top" Width="111" Height="22"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="27,325,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Text="Double Click Username above "/><LineBreak/><Run Text="to edit permissions:"/><LineBreak/><Run/></TextBlock>
+
+                </Grid>
+            </TabItem>

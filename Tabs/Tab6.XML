@@ -1,0 +1,21 @@
+            <TabItem x:Name="SSPRTab" Header="Alt. Phone/Alt. Email" Margin="0">
+                <Grid>
+                    <TextBox x:Name="SSPRName_TextBox" HorizontalAlignment="Left" Height="23" Margin="168,11,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="85,11,0,0" TextWrapping="Wrap" Text="Username:" VerticalAlignment="Top"/>
+                    <Button x:Name="SSPRSearch_Button" Content="Search Username" HorizontalAlignment="Left" Margin="308,11,0,0" VerticalAlignment="Top" Width="111" Height="23"/>
+                    <TextBlock x:Name="SSPRError_TextBlock" HorizontalAlignment="Left" Margin="436,11,0,0" TextWrapping="Wrap" Text="Invalid Data" VerticalAlignment="Top" FontFamily="Segoe UI Semibold" FontSize="12" Visibility="Hidden" Foreground="Red">
+                        <TextBlock.Effect>
+                            <DropShadowEffect ShadowDepth="3"/>
+                        </TextBlock.Effect>
+                    </TextBlock>
+                    <TextBox x:Name="SSPRFirstName_TextBox" HorizontalAlignment="Left" Height="23" Margin="170,59,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsReadOnly="True" Background="#FFDDDDDD"/>
+                    <TextBox x:Name="SSPRLastName_TextBox" HorizontalAlignment="Left" Height="23" Margin="309,60,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsReadOnly="True" Background="#FFDDDDDD"/>
+                    <TextBox x:Name="SSPREmail_TextBox" HorizontalAlignment="Left" Height="23" Margin="170,114,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="334" IsReadOnly="True" Background="#FFDDDDDD"/>
+                    <TextBox x:Name="SSPRPhone_TextBox" HorizontalAlignment="Left" Height="23" Margin="170,142,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="334" IsReadOnly="True" Background="#FFDDDDDD"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="106,60,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Text="Name:"/><LineBreak/><Run/></TextBlock>
+                    <TextBlock HorizontalAlignment="Left" Margin="60,114,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Text="Alternate Email:"/><LineBreak/><Run/></TextBlock>
+                    <TextBlock HorizontalAlignment="Left" Margin="56,142,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="Alternate Phone:"/>
+
+                </Grid>
+            </TabItem>
+

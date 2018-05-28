@@ -1,0 +1,55 @@
+	<TabItem x:Name="DistGroupsTab" Header="Distribution Groups" Margin="0">
+                <Grid>
+                    <TextBox x:Name="DGName_TextBox" HorizontalAlignment="Left" Height="23" Margin="168,11,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="27,11,0,0" TextWrapping="Wrap" Text="Distribution Group Name:" VerticalAlignment="Top"/>
+                    <Button x:Name="DGView_Button" Content="View Details" HorizontalAlignment="Left" Margin="308,11,0,0" VerticalAlignment="Top" Width="111" Height="22"/>
+                    <ListView x:Name="DGMembers_ListView" HorizontalAlignment="Left" Height="257" Margin="27,57,0,0" VerticalAlignment="Top" Width="230">
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn Header="Members" DisplayMemberBinding ="{Binding Name}" Width="230"/>
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
+                    <ListView x:Name="DGSenders_ListView" HorizontalAlignment="Left" Height="257" Margin="269,57,0,0" VerticalAlignment="Top" Width="230">
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn Header="Approved Senders" Width="230"/>
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
+                    <ListView x:Name="DGOwners_ListView" HorizontalAlignment="Left" Height="183" Margin="512,57,0,0" VerticalAlignment="Top" Width="132">
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn Header="Owners" Width="130"/>
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
+                    <Button x:Name="DGRemoveMember_Button" Content="Remove Selected" HorizontalAlignment="Left" Margin="27,319,0,0" VerticalAlignment="Top" Width="168" Height="22"/>
+                    <Button x:Name="DGAddMember_Button" Content="Add to Members" HorizontalAlignment="Left" Margin="27,374,0,0" VerticalAlignment="Top" Width="168" Height="22"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="27,350,0,0" TextWrapping="Wrap" Text="Username:" VerticalAlignment="Top"/>
+                    <TextBox x:Name="DGUsernameAdd_TextBox" HorizontalAlignment="Left" Height="23" Margin="99,346,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                    <Button x:Name="DGRemoveSender_Button" Content="Remove Selected" HorizontalAlignment="Left" Margin="269,319,0,0" VerticalAlignment="Top" Width="168" Height="22"/>
+                    <Button x:Name="DGAddSender_Button" Content="Add to Senders" HorizontalAlignment="Left" Margin="269,374,0,0" VerticalAlignment="Top" Width="168" Height="22"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="269,350,0,0" TextWrapping="Wrap" Text="Username:" VerticalAlignment="Top"/>
+                    <TextBox x:Name="DGUsernameSend_TextBox" HorizontalAlignment="Left" Height="23" Margin="330,347,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>                    
+                    <TextBox x:Name="DGAddOwner_TextBox" HorizontalAlignment="Left" Height="23" Margin="512,270,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                    <Button x:Name="DGRemoveOwner_Button" Content="Remove Selected" HorizontalAlignment="Left" Margin="512,245,0,0" VerticalAlignment="Top" Width="100"/>
+                    <Button x:Name="DGAddOwner_Button" Content="Add to Owners" HorizontalAlignment="Left" Margin="512,298,0,0" VerticalAlignment="Top" Width="100"/>
+                    <TextBlock x:Name="DGCloud_TextBlock" HorizontalAlignment="Left" Margin="480,15,0,0" TextWrapping="Wrap" Text="In the Cloud" VerticalAlignment="Top" Foreground="#FF5500FF" Visibility="Hidden">
+                        <TextBlock.Effect>
+                            <DropShadowEffect ShadowDepth="3"/>
+                        </TextBlock.Effect>
+                    </TextBlock>
+                    <TextBlock x:Name="DGAD_TextBlock" HorizontalAlignment="Left" Margin="480,15,0,0" TextWrapping="Wrap" Text="Distribution Group in AD" VerticalAlignment="Top" Foreground="#FFFCCF00" Width="80"  Visibility="Hidden">
+                        <TextBlock.Effect>
+                            <DropShadowEffect BlurRadius="4" ShadowDepth="2"/>
+                        </TextBlock.Effect>
+                    </TextBlock>
+                    <TextBlock x:Name="DGADSecurityGroup_TextBlock" HorizontalAlignment="Left" Margin="480,15,0,0" TextWrapping="Wrap" Text="Security Group in AD" VerticalAlignment="Top" Foreground="#C70039" Width="80"  Visibility="Hidden">
+                        <TextBlock.Effect>
+                            <DropShadowEffect BlurRadius="4" ShadowDepth="2"/>
+                        </TextBlock.Effect>
+                    </TextBlock>
+                    <TextBlock x:Name="DGError_TextBlock" HorizontalAlignment="Left" Margin="480,15,0,0" TextWrapping="Wrap" Text="Invalid Entry" VerticalAlignment="Top" Foreground="#FF3333" Width="65" Visibility="Hidden" />
+                </Grid>
+            </TabItem>

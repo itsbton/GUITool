@@ -1,0 +1,31 @@
+            <TabItem x:Name="CheckUsernameTab" Header="General Search" Margin="0">
+                <Grid>
+                    <TextBox x:Name="CUName_TextBox" HorizontalAlignment="Left" Height="23" Margin="168,11,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="85,11,0,0" TextWrapping="Wrap" Text="Username:" VerticalAlignment="Top"/>
+                    <Button x:Name="CUSearch_Button" Content="Search" HorizontalAlignment="Left" Margin="308,11,0,0" VerticalAlignment="Top" Width="111" Height="23"/>                    
+                    <ListBox ItemsSource="{Binding}" Name="CUUsername_ListBox" Width="150" DockPanel.Dock="Left" Height="274" Margin="40,89,0,0" HorizontalAlignment="Left" VerticalAlignment="Top">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <TextBlock>
+                                    <TextBlock.Text>
+                                        <MultiBinding StringFormat="{}{0} | {1}">
+                                            <Binding Path="DisplayName" />
+                                            <Binding Path="Identity" />
+                                        </MultiBinding>
+                                    </TextBlock.Text>
+                                </TextBlock>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                    <TextBox x:Name="CUDetails_TextBox" HorizontalAlignment="Left" Height="272" Margin="228,87,0,0" VerticalAlignment="Top" Width="450" FontFamily="Lucida Console" IsReadOnly="True" HorizontalScrollBarVisibility="Auto"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="40,368,0,0" TextWrapping="Wrap" Text="Double Click Username to view details" VerticalAlignment="Top"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="40,68,0,0" TextWrapping="Wrap" Text="Search Results:" VerticalAlignment="Top"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="228,68,0,0" TextWrapping="Wrap" Text="Details:" VerticalAlignment="Top"/>
+                    <TextBlock x:Name="CUType_TextBlock" HorizontalAlignment="Left" Margin="399,64,0,0" TextWrapping="Wrap" Text="Distribution Group" VerticalAlignment="Top" FontFamily="Segoe UI Semibold" FontSize="16" Visibility="Hidden">
+                        <TextBlock.Effect>
+                            <DropShadowEffect ShadowDepth="3"/>
+                        </TextBlock.Effect>
+                    </TextBlock>
+
+                </Grid>
+            </TabItem>

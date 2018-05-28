@@ -1,0 +1,43 @@
+	<TabItem x:Name="UnifiedGroupsTab" Header="Unified Groups (O365 Groups)" Margin="0">
+                <Grid>
+                    <TextBox x:Name="UGName_TextBox" HorizontalAlignment="Left" Height="23" Margin="144,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="159"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="27,11,0,0" TextWrapping="Wrap" Text="O365 Group Name:" VerticalAlignment="Top"/>
+                    <Button x:Name="UGView_Button" Content="View Details" HorizontalAlignment="Left" Margin="308,11,0,0" VerticalAlignment="Top" Width="111" Height="22"/>                   
+                    <ListView x:Name="UGMembers_ListView" HorizontalAlignment="Left" Height="257" Margin="269,57,0,0" VerticalAlignment="Top" Width="237">
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn Header="Members" DisplayMemberBinding ="{Binding Name}" Width="238"/>
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
+                    <ListView x:Name="UGOwners_ListView" HorizontalAlignment="Left" Height="183" Margin="512,57,0,0" VerticalAlignment="Top" Width="132">
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn Header="Owners" DisplayMemberBinding ="{Binding Name}" Width="130"/>
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
+                    <TextBlock HorizontalAlignment="Left" Margin="28,44,0,0" TextWrapping="Wrap" Text="Details:" VerticalAlignment="Top"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="34,76,0,0" TextWrapping="Wrap" Text="Display Name:" VerticalAlignment="Top"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="33,103,0,0" TextWrapping="Wrap" Text="Email Address:" VerticalAlignment="Top"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="34,131,0,0" TextWrapping="Wrap" Text="Created On:" VerticalAlignment="Top"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="33,159,0,0" TextWrapping="Wrap" Text="Member Count:" VerticalAlignment="Top"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="34,187,0,0" TextWrapping="Wrap" Text="Description:" VerticalAlignment="Top"/>
+                    <TextBox x:Name="UGDisplayName_TextBox" HorizontalAlignment="Left" Height="23" Margin="115,75,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="149" Background="#FFDDDDDD" IsReadOnly="True"/>
+                    <TextBox x:Name="UGEmailAddress_TextBox" HorizontalAlignment="Left" Height="23" Margin="115,103,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="149" Background="#FFDDDDDD" IsReadOnly="True"/>
+                    <TextBox x:Name="UGCreatedOn_TextBox" HorizontalAlignment="Left" Height="23" Margin="115,131,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="149" Background="#FFDDDDDD" IsReadOnly="True"/>
+                    <TextBox x:Name="UGMemberCount_TextBox" HorizontalAlignment="Left" Height="23" Margin="121,159,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="143" Background="#FFDDDDDD" IsReadOnly="True"/>
+                    <TextBox x:Name="UGNotes_TextBox" IsReadOnly="True" HorizontalAlignment="Left" Height="99" Margin="34,215,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="206" Background="#FFDDDDDD"/>
+                    <RadioButton GroupName="UGVisibility" x:Name="UGPublic_RadioButton" Content="Public" HorizontalAlignment="Left" Margin="27,329,0,0" VerticalAlignment="Top"/>
+                    <RadioButton GroupName="UGVisibility" x:Name="UGPrivate_RadioButton" Content="Private" HorizontalAlignment="Left" Margin="28,350,0,0" VerticalAlignment="Top"/>
+                    <Button x:Name="UGChangeVis_Button" Content="Change Visibility" HorizontalAlignment="Left" Margin="27,374,0,0" VerticalAlignment="Top" Width="168" Height="22"/>
+                    <Button x:Name="UGRemoveMember_Button" Content="Remove Selected" HorizontalAlignment="Left" Margin="269,319,0,0" VerticalAlignment="Top" Width="168" Height="22"/>
+                    <Button x:Name="UGAddMember_Button" Content="Add to Members" HorizontalAlignment="Left" Margin="269,374,0,0" VerticalAlignment="Top" Width="168" Height="22"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="269,350,0,0" TextWrapping="Wrap" Text="Username:" VerticalAlignment="Top"/>
+                    <TextBox x:Name="UGAddMember_TextBox" HorizontalAlignment="Left" Height="23" Margin="330,347,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                    <TextBox x:Name="UGAddOwner_TextBox" HorizontalAlignment="Left" Height="23" Margin="512,270,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                    <Button x:Name="UGRemoveOwner_Button" Content="Remove Selected" HorizontalAlignment="Left" Margin="512,245,0,0" VerticalAlignment="Top" Width="100"/>
+                    <Button x:Name="UGAddOwner_Button" Content="Add to Owners" HorizontalAlignment="Left" Margin="512,298,0,0" VerticalAlignment="Top" Width="100"/>
+
+                </Grid>
+            </TabItem>

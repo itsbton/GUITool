@@ -1,0 +1,19 @@
+	<TabItem x:Name="OOOTab" Header="Out of Office Message" Margin="0">
+                <Grid>
+                    <TextBox x:Name="OOOMessage_TextBox" HorizontalAlignment="Left" Height="193" Margin="36,82,0,0" TextWrapping="Wrap" Text="Out of Office Message here" VerticalAlignment="Top" Width="633" AcceptsReturn="True" VerticalScrollBarVisibility="Auto" SpellCheck.IsEnabled="True"/>
+                    <TextBox x:Name="OOOUsername_TextBox" HorizontalAlignment="Left" Height="23" Margin="105,36,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="39,39,0,0" TextWrapping="Wrap" Text="Username:" VerticalAlignment="Top"/>
+                    <Button x:Name="OOOView_Button" Content="View OOO" HorizontalAlignment="Left" Margin="248,37,0,0" VerticalAlignment="Top" Width="75"/>
+                    <Button x:Name="OOOAdd_Button" Content="Apply OOO" HorizontalAlignment="Left" Margin="594,298,0,0" VerticalAlignment="Top" Width="75"/>
+                    <Button x:Name="OOOClear_Button" Content="Clear OOO" HorizontalAlignment="Left" Margin="39,298,0,0" VerticalAlignment="Top" Width="75"/>
+                    <Button x:Name="OOOTurnOff_Button" Content="Turn Off OOO" HorizontalAlignment="Left" Margin="131,298,0,0" VerticalAlignment="Top" Width="94"/>
+                    <TextBlock x:Name="OOOOn_TextBlock" HorizontalAlignment="Left" Margin="369,24,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="#FF009B09" Text="Out of Office message is On" Visibility="Hidden"/>
+                    <TextBlock x:Name="OOOOff_TextBlock" HorizontalAlignment="Left" Margin="368,44,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="Red" Text="Out of Office message is Off" Visibility="Hidden"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="45,350,0,0" TextWrapping="Wrap" Text="NOTE: You can add HTML formatting if you would like" VerticalAlignment="Top"/>
+                    <RadioButton GroupName="TimeOOO" x:Name="OOOIndef_RadioButton" Content="Indefinitely" HorizontalAlignment="Left" Margin="594,338,0,0" VerticalAlignment="Top"/>
+                    <RadioButton GroupName="TimeOOO" x:Name="OOO30Days_RadioButton" Content="30 days" HorizontalAlignment="Left" Margin="594,358,0,0" VerticalAlignment="Top"/>
+                    <TextBlock x:Name="OOOEndDate_TextBlock" HorizontalAlignment="Left" Margin="477,302,0,0" TextWrapping="Wrap" Text="No End Date" VerticalAlignment="Top" Foreground="Red"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="379,302,0,0" TextWrapping="Wrap" Text="End Date of OOO:" VerticalAlignment="Top"/>
+
+                </Grid>
+            </TabItem>
