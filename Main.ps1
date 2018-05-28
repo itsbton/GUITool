@@ -71,11 +71,11 @@ if ( (get-pssession).computername -eq "outlook.office365.com" ) {
 }
 
 #Connect to On-Prem Exchange
-if ( (get-pssession).computername -eq "cas03.campus.up.edu" ) {    
+if ( (get-pssession).computername -eq "ON PREM ADDRESS" ) {    
 } else {
     Write-Output "Connecting to On-Premise Exchange..."
-    $UserCredentialOnPrem = Get-Credential -Message "Exchange On-Prem Login (No @up.edu)"
-    $Session = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri http://cas03.campus.up.edu/Powershell/ -Credential $UserCredentialOnPrem -Authentication Kerberos
+    $UserCredentialOnPrem = Get-Credential -Message "Exchange On-Prem Login "
+    $Session = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri "ONPREMADDRESS" -Credential $UserCredentialOnPrem -Authentication Kerberos
     Import-PSSession $Session -Prefix OP
 }
 
