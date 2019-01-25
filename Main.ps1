@@ -1,4 +1,18 @@
-﻿
+﻿# Check if necessary Modules are Installed
+if (Get-Module -ListAvailable -Name AzureAD) {
+    Write-Host "Module exists"
+} else {
+    Write-Host "Installing Azure AD Module. Please wait while installation is initiated"
+    Install-Module AzureAD -scope CurrentUser
+}
+
+if(Get-Module -ListAvailable -Name MSOnline) {
+    Write-Host "Module exists"
+} else {
+    Write-Host "Installing Azure MSOnline Module. Please wait while installation is initiated"
+    Install-Module MSOnline -Scope CurrentUser
+}
+
 $BeginXML = @"
 <Window x:Class="O365AdminTools.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
